@@ -595,6 +595,11 @@ img {
   color: var(--secondary-text-color);
 }
 /*todo ###############--Over--###############*/
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -615,6 +620,7 @@ img {
 
   width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -644,8 +650,44 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+.modal-title {
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  text-align: center;
 }
+.form-field {
+  position: relative;
+  display: block;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field > .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form-field:focus-within > .icon {
+  fill: var(--accent-color);
+}
+.form-field;
