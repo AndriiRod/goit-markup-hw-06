@@ -200,6 +200,7 @@ img {
   max-width: 1600px;
   height: 600px;
   padding-top: 200px;
+  margin: 0 auto;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-img.jpg);
@@ -649,6 +650,10 @@ img {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.modal-btn:focus > .icon,
+.modal-btn:hover > .icon {
+  fill: var(--accent-color);
+}
 
 .modal-title {
   margin-bottom: 30px;
@@ -662,6 +667,8 @@ img {
 .form-field {
   position: relative;
   display: block;
+
+  margin-bottom: 28px;
 }
 .form-input {
   width: 100%;
@@ -687,7 +694,40 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
+.form-field:hover,
+.form-input:hover {
+  cursor: pointer;
+}
+
 .form-field:focus-within > .icon {
   fill: var(--accent-color);
 }
-.form-field;
+
+.form-field:focus-within > .form-input {
+  outline: transparent;
+  border-color: var(--accent-color);
+}
+.form-field:focus-within > .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  animation: label-anim-up 1200ms var(--animation-cubic-bezier) forwards;
+}
+@keyframes label-anim-up {
+  0% {
+  }
+  60% {
+    transform: translateY(-38px);
+  }
+  100% {
+    transform: translateY(-38px) translateX(-42px);
+  }
+}
+@keyframes label-anim-down {
+  0% {
+  }
+  60% {
+    transform: translateX(42px);
+  }
+  100% {
+    transform: translateX(42px) translateY(38px);
+  }
+}
