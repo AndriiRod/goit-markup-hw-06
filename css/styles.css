@@ -429,6 +429,7 @@ img {
 }
 .footer > .container {
   display: flex;
+  gap: 93px;
 }
 .footer-logo {
   margin-bottom: 20px;
@@ -451,7 +452,6 @@ img {
 /* ! */
 .footer-wrapp {
   margin-top: 12px;
-  margin-left: 94px;
 }
 .footer-title {
   margin-bottom: 20px;
